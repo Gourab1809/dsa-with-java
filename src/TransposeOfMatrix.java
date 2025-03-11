@@ -9,7 +9,7 @@ public class TransposeOfMatrix {
         }
         System.out.println();
     }
-    static void transpose(int[][]arr,int r,int c){
+    static int[][] transpose(int[][]arr,int r,int c){
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
                 int temp=arr[i][j];
@@ -17,6 +17,8 @@ public class TransposeOfMatrix {
                 arr[j][i]=temp;
             }
         }
+        return arr;
+        //printMatrix(arr,r,c);
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -34,8 +36,8 @@ public class TransposeOfMatrix {
         System.out.println("the matrix is");
         printMatrix(arr,r,c);
         System.out.println("the transpose of matrix is");
-        transpose(arr,r,c);
-        printMatrix(arr,r,c);
+        int [][]arr1=transpose(arr,r,c);
+        printMatrix(arr1,r,c);
     }
 
 }
